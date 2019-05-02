@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Setting up your ads.txt file
+title: Setting up your ads.txt
 nav_order: 2
-grand_parent: Advertising
-parent: Publishers
-permalink: /advertising/publishers/ads-txt
+parent: Advertising Publishers
+has_children: true
+permalink: /advertising/publishers/adstxt
 ---
 
 Setting up your ads.txt file

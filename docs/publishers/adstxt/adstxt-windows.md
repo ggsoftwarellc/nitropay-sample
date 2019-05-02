@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Redirecting ads.txt on Windows Server
-nav_order: 6
-grand_parent: Advertising
-parent: Publishers
+nav_order: 4
+grand_parent: Advertising Publishers
+parent: Setting up your ads.txt
 permalink: /advertising/publishers/ads-txt/windows
 ---
 
 Redirecting ads.txt on Windows Server
 {: .fs-6 }
 
-This section expands our [ads.txt setup article](/advertising/publishers/ads-txt) to cover steps on setting up a 301 redirect for Windows (IIS) web servers.
+This section expands our [ads.txt setup article](/advertising/publishers/adstxt) to cover steps on setting up a 301 redirect for Windows (IIS) web servers.
 {: .fs-5 }
 
 - Ensure the rewrite module is installed ([see here](https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-the-url-rewrite-module) for Microsoft's documentation)

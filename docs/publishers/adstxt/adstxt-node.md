@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Redirecting ads.txt on Node.js/Express
-nav_order: 5
-grand_parent: Advertising
-parent: Publishers
+nav_order: 3
+grand_parent: Advertising Publishers
+parent: Setting up your ads.txt
 permalink: /advertising/publishers/ads-txt/node
 ---
 
 Redirecting ads.txt on Node.js/Express
 {: .fs-6 }
 
-This section expands our [ads.txt setup article](/advertising/publishers/ads-txt) to cover steps on setting up a 301 redirect for Node.js / Express web servers.
+This section expands our [ads.txt setup article](/advertising/publishers/adstxt) to cover steps on setting up a 301 redirect for Node.js / Express web servers.
 {: .fs-5 }
 
 - Open the node.js file where your routing is commonly done.

@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Redirecting ads.txt on Apache
-nav_order: 3
-grand_parent: Advertising
-parent: Publishers
+nav_order: 1
+grand_parent: Advertising Publishers
+parent: Setting up your ads.txt
 permalink: /advertising/publishers/ads-txt/apache
 ---
 
 Redirecting ads.txt on Apache
 {: .fs-6 }
 
-This section expands our [ads.txt setup article](/advertising/publishers/ads-txt) to cover steps on setting up a 301 redirect for Apache web servers.
+This section expands our [ads.txt setup article](/advertising/publishers/adstxt) to cover steps on setting up a 301 redirect for Apache web servers.
 {: .fs-5 }
 
 - Look for the **.htaccess** file in the root directory of your site. If it doesn't exist, create one.

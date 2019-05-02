@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Redirecting ads.txt on Nginx
-nav_order: 4
-grand_parent: Advertising
-parent: Publishers
+nav_order: 2
+grand_parent: Advertising Publishers
+parent: Setting up your ads.txt
 permalink: /advertising/publishers/ads-txt/nginx
 ---
 
 Redirecting ads.txt on Nginx
 {: .fs-6 }
 
-This section expands our [ads.txt setup article](/advertising/publishers/ads-txt) to cover steps on setting up a 301 redirect for Nginx web servers.
+This section expands our [ads.txt setup article](/advertising/publishers/adstxt) to cover steps on setting up a 301 redirect for Nginx web servers.
 {: .fs-5 }
 
 - Locate your Nginx site configuration.
