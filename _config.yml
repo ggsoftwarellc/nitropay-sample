@@ -20,21 +20,19 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ggsoftwarellc.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
+url: "https://docs.nitropay.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ggsoftwarellc
 github_username: ggsoftwarellc
 
 # Build settings
 markdown: kramdown
 remote_theme: pmarsceill/just-the-docs
-plugins:
-  - jekyll-feed
 
 # Theme settings
 search_enabled: true
 aux_links:
   "Submit a Ticket":
-    - "//nitropay.com"
+    - "//nitropay.com/ticket"
 # color_scheme: "dark"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
