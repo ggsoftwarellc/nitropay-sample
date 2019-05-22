@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Setting up your ads.txt
-nav_order: 2
-parent: Advertising Publishers
+nav_order: 1
+parent: Ad Publishers
 has_children: true
 permalink: /advertising/publishers/adstxt
 ---

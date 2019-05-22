@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Installing the ad script on your page
-nav_order: 1
-parent: Advertising Publishers
+nav_order: 2
+parent: Ad Publishers
 permalink: /advertising/publishers/install
 ---
 

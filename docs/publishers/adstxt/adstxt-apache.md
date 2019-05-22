@@ -2,7 +2,7 @@
 layout: default
 title: Redirecting ads.txt on Apache
 nav_order: 1
-grand_parent: Advertising Publishers
+grand_parent: Ad Publishers
 parent: Setting up your ads.txt
 permalink: /advertising/publishers/ads-txt/apache
 ---

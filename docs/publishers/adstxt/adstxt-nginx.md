@@ -2,7 +2,7 @@
 layout: default
 title: Redirecting ads.txt on Nginx
 nav_order: 2
-grand_parent: Advertising Publishers
+grand_parent: Ad Publishers
 parent: Setting up your ads.txt
 permalink: /advertising/publishers/ads-txt/nginx
 ---

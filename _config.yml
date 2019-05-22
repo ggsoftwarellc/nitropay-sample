@@ -32,7 +32,7 @@ remote_theme: pmarsceill/just-the-docs
 search_enabled: true
 aux_links:
   "Submit a Ticket":
-    - "//nitropay.com/ticket"
+    - "//nitropay.com/support"
 # color_scheme: "dark"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

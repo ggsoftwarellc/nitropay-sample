@@ -2,7 +2,7 @@
 layout: default
 title: Redirecting ads.txt on Node.js/Express
 nav_order: 3
-grand_parent: Advertising Publishers
+grand_parent: Ad Publishers
 parent: Setting up your ads.txt
 permalink: /advertising/publishers/ads-txt/node
 ---
