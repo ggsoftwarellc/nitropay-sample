@@ -15,7 +15,7 @@ Generates the client and content for https://docs.nitropay.com
 
 `bundle exec jekyll s`
 
-The server will be running at http://localhost:4200
+The server will be running at http://localhost:4000
 
 ## Development
 
