@@ -27,7 +27,7 @@ Go SDK
 Create a signed [token](/sponsor/token) for passing a user's identity to the client library using the secret found in your [panel](https://panel.nitropay.com/sponsor/products) and the following code example as reference.
 
 ```go
-import sponsor "github.com/ggsoftware/nitropay-sponsor-go/v3"
+import sponsor "github.com/ggsoftwarellc/nitropay-sponsor-go/v3"
 
 s := sponsor.NewSigner("YOUR_SECRET") // set the secret here
 userInfo := sponsor.UserInfo{
