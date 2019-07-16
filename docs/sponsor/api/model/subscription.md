@@ -10,10 +10,10 @@ permalink: /sponsor/api/model/subscription
 SponsorSubscription
 {: .fs-6 }
 
-| Key                 | Type                               | Possible Values  |
-| :------------------ | :--------------------------------- | :--------------- |
-| **status**          | string                             | active, inactive |
-| **cancelledAt**     | datetime                           |                  |
-| **subscribedUntil** | datetime                           |                  |
-| **provider**        | string                             | stripe, paypal   |
-| **tier**            | [SponsorTier](/sponsor/model/tier) |                  |
+| Key                 | Type                                   | Possible Values  |
+| :------------------ | :------------------------------------- | :--------------- |
+| **status**          | string                                 | active, inactive |
+| **cancelledAt**     | datetime                               |                  |
+| **subscribedUntil** | datetime                               |                  |
+| **provider**        | string                                 | stripe, paypal   |
+| **tier**            | [SponsorTier](/sponsor/api/model/tier) |                  |

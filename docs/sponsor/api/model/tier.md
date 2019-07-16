@@ -10,13 +10,13 @@ permalink: /sponsor/api/model/tier
 SponsorTier
 {: .fs-6 }
 
-| Key             | Type                                       | Possible Values        |
-| :-------------- | :----------------------------------------- | :--------------------- |
-| **id**          | int                                        |                        |
-| **name**        | string                                     |                        |
-| **description** | string                                     |                        |
-| **currency**    | string                                     |                        |
-| **price**       | int                                        |                        |
-| **period**      | string                                     | day, week, month, year |
-| **periodCount** | int                                        |                        |
-| **benefits**    | [SponsorBenefit[]](/sponsor/model/benefit) |                        |
+| Key             | Type                                           | Possible Values        |
+| :-------------- | :--------------------------------------------- | :--------------------- |
+| **id**          | int                                            |                        |
+| **name**        | string                                         |                        |
+| **description** | string                                         |                        |
+| **currency**    | string                                         |                        |
+| **price**       | int                                            |                        |
+| **period**      | string                                         | day, week, month, year |
+| **periodCount** | int                                            |                        |
+| **benefits**    | [SponsorBenefit[]](/sponsor/api/model/benefit) |                        |

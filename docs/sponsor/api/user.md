@@ -18,10 +18,10 @@ GET v1/users
 
 ### Response
 
-| Key              | Type                                               |
-| :--------------- | :------------------------------------------------- |
-| **user**         | [SponsorUser](/sponsor/model/user)                 |
-| **subscription** | [SponsorSubscription](/sponsor/model/subscription) |
+| Key              | Type                                                   |
+| :--------------- | :----------------------------------------------------- |
+| **user**         | [SponsorUser](/sponsor/api/model/user)                 |
+| **subscription** | [SponsorSubscription](/sponsor/api/model/subscription) |
 
 ### Example Request
 
