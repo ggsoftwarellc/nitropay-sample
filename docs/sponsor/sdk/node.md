@@ -25,7 +25,7 @@ Node.js SDK
 
 ### Usage
 
-Create a signed [token](/sponsor/token) for passing a user's identity to the client library using the secret found in your [panel](https://panel.nitropay.com/sponsor/brands) and the following code example as reference.
+Create a signed [token](/sponsor/token) for passing a user's identity to the client library using the secret found in your [panel](https://panel.nitropay.com/sponsor/products) and the following code example as reference.
 
 ```php
 var sponsor = require("nitropay-sponsor-node");

@@ -15,9 +15,9 @@ This product allows you to quickly accept subscription payments from your users 
 
 _This is not an out-of-box user system and we don't currently offer adapters for common systems. Setup will require an intermediate level of backend and frontend development._
 
-### 1. Create a brand
+### 1. Create a product
 
-The first step is to [create a brand](https://panel.nitropay.com/sponsor/brands) in the NitroPay panel. Within your brand, you'll define one or more tiers that offer various benefits and payment terms to your users.
+The first step is to [create a product](https://panel.nitropay.com/sponsor/products) in the NitroPay panel. Within your product, you'll define one or more tiers that offer various benefits and payment terms to your users.
 
 ### 2. Implement the backend SDK
 
@@ -50,7 +50,7 @@ window["nitroSponsor"].init(
     token: "USER_TOKEN",
     successUrl: "https://example.com/success",
     cancelUrl: "https://example.com/cancel",
-    brand: 12345
+    product: 12345
   },
   function(res) {
     // success callback

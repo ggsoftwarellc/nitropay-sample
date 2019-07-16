@@ -21,4 +21,4 @@ Encode with the HMAC-SHA512 (HS512) algorithm, and include the following payload
 | **iss** | NitroPay ID of your site, found in your [panel](https://panel.nitropay.com/sites)      | _104_    | Yes      |
 | **sub** | A unique identifier for the user, this should be their internal ID in your user system | _494182_ | Yes      |
 
-Tokens must be encrypted using the secret found in your [panel](https://panel.nitropay.com/sponsor/brands).
+Tokens must be encrypted using the secret found in your [panel](https://panel.nitropay.com/sponsor/products).
