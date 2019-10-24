@@ -18,7 +18,6 @@ Our recommended implementation for an ad placement is the following HTML snippet
 
 <script type="text/javascript">
   window["nitroAds"].createAd("placement-1", {
-    floor: 0.05,
     refreshLimit: 10,
     refreshTime: 90,
     report: {

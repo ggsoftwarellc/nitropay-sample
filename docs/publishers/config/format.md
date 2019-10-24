@@ -21,7 +21,7 @@ Note that video formats are not available for your sites by default. Please disc
 | Value            | Definition                                                                                                        |
 | :--------------- | :---------------------------------------------------------------------------------------------------------------- |
 | **display**      | Traditional static/animated ad format                                                                             |
-| **anchor**       | Mobile-only dismissable 320x50 unit that anchors to the bottom of their screen                                    |
+| **anchor**       | Dismissable ad unit that is anchored in place.  Default's to mobile-only 320x50 at bottom of screen.              |
 | **video-slider** | Video unit that slides in from the bottom right of the page and scrolls with the user until finished or dismissed |
 | **video-inread** | Video unit that is embedded in the page                                                                           |
 | **video-ds**     | DistroScale video unit                                                                                            |
