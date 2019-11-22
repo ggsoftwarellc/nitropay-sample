@@ -1,7 +1,7 @@
 ---
 layout: default
 title: visibleMargin
-nav_order: 13
+nav_order: 15
 grand_parent: Ad Publishers
 parent: Configuration options
 permalink: /advertising/publishers/config/visible-margin
@@ -10,9 +10,9 @@ permalink: /advertising/publishers/config/visible-margin
 Configuration options
 {: .fs-6 }
 
-| Key                   | Accepted Values | Default | Type    | Required |
-| :-------------------- | :-------------- | :------ | :------ | :------- |
-| **visibleMargin** | 0+     | _200_ | integer | No       |
+| Key               | Accepted Values | Default | Type    | Required |
+| :---------------- | :-------------- | :------ | :------ | :------- |
+| **visibleMargin** | 0+              | _200_   | integer | No       |
 
 When used with `renderVisibleOnly` or `refreshVisibleOnly`, this is the off-screen margin used to determine when an ad should begin loading.
 
