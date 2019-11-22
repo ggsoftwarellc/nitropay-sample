@@ -1,7 +1,7 @@
 ---
 layout: default
 title: frequencyCap
-nav_order: 4
+nav_order: 401
 grand_parent: Ad Publishers
 parent: Configuration options
 permalink: /advertising/publishers/config/frequency-cap

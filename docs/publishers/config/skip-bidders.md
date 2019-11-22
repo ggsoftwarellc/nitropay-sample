@@ -1,7 +1,7 @@
 ---
 layout: default
 title: skipBidders
-nav_order: 12
+nav_order: 1901
 grand_parent: Ad Publishers
 parent: Configuration options
 permalink: /advertising/publishers/config/skip-bidders

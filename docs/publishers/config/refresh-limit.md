@@ -1,7 +1,7 @@
 ---
 layout: default
 title: refreshLimit
-nav_order: 5
+nav_order: 1801
 grand_parent: Ad Publishers
 parent: Configuration options
 permalink: /advertising/publishers/config/refresh-limit

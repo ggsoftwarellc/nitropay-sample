@@ -1,7 +1,7 @@
 ---
 layout: default
 title: renderVisibleOnly
-nav_order: 8
+nav_order: 1804
 grand_parent: Ad Publishers
 parent: Configuration options
 permalink: /advertising/publishers/config/render-visible-only

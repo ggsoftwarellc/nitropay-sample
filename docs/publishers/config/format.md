@@ -1,7 +1,7 @@
 ---
 layout: default
 title: format
-nav_order: 3
+nav_order: 600
 grand_parent: Ad Publishers
 parent: Configuration options
 permalink: /advertising/publishers/config/format

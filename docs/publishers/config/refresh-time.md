@@ -1,7 +1,7 @@
 ---
 layout: default
 title: refreshTime
-nav_order: 6
+nav_order: 1802
 grand_parent: Ad Publishers
 parent: Configuration options
 permalink: /advertising/publishers/config/refresh-time

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: refreshVisibleOnly
-nav_order: 9
+nav_order: 1803
 grand_parent: Ad Publishers
 parent: Configuration options
 permalink: /advertising/publishers/config/refresh-visible-only

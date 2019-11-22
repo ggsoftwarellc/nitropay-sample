@@ -1,7 +1,7 @@
 ---
 layout: default
 title: sizes
-nav_order: 11
+nav_order: 1900
 grand_parent: Ad Publishers
 parent: Configuration options
 permalink: /advertising/publishers/config/sizes

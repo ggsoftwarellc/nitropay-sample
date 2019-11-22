@@ -1,7 +1,7 @@
 ---
 layout: default
 title: stickyStackLimit
-nav_order: 13
+nav_order: 1902
 grand_parent: Ad Publishers
 parent: Configuration options
 permalink: /advertising/publishers/config/sticky-stack-limit
