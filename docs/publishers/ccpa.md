@@ -9,7 +9,7 @@ permalink: /advertising/publishers/ccpa
 CCPA Compliance Guide
 {: .fs-6 }
 
-On January 1st 2020, the California Consumer Privacy Act (CCPA) goes into effect, and the deadline for compliance is the end of January 2020. All existing publishers are expected to take the steps outlined if they service users from California, even if your website is operated outside of the state.
+On January 1st 2020, the California Consumer Privacy Act (CCPA) goes into effect, and the deadline for compliance is the end of January 2020. All existing publishers are expected to take the steps outlined if they service users from California, even if the website is operated outside of the state.
 
 ### 1. Add the "Do Not Sell My Personal Information" links
 
