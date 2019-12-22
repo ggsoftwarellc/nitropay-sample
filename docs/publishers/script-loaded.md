@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Detect when the ad script is loaded
-nav_order: 8
+nav_order: 9
 parent: Ad Publishers
 permalink: /advertising/publishers/loaded
 ---
