@@ -21,7 +21,7 @@ Include the following tag on your homepage and privacy policy and the link will 
 <span class="nitropay-ccpa-link"></span>
 ```
 
-To test the CCPA links from other regions, you can append `?ccpa_debug=1` to your URL. E.g. `https://example.com/?ccpa_debug=1`.
+To test the CCPA links from other regions, you can append `?usp_debug=1` to your URL. E.g. `https://example.com/?usp_debug=1`.
 
 ### 2. Update your privacy policy
 
