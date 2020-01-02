@@ -37,4 +37,4 @@ If you have read and signed the **Limited Service Provider Agreement (LSPA)**, p
 
 ### Custom "Do Not Sell My Personal Information" link
 
-If you choose not to use our bundled CCPA optout box, your implemention must set a cookie named `CCPAOPTOUT` with a value of `1` when the user instructs not to sell their personal information. The NitroPay ad script looks for that cookie in order to instruct all of the third party ad exchanges about the user's exercised right.
+If you choose not to use our bundled CCPA optout box, your implemention must set a cookie named `CCPAOPTOUT` (with any value) when the user instructs not to sell their personal information. The NitroPay ad script looks for that cookie in order to instruct all of the third party ad exchanges about the user's exercised right. You should delete or expire the cookie if the user opts back in.
