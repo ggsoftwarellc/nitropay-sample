@@ -15,10 +15,10 @@ On January 1st 2020, the California Consumer Privacy Act (CCPA) goes into effect
 
 Your homepage and privacy policy must include clear and conspicuous "Do Not Sell My Personal Information" links that allow California residents to exercise their right to opt-out (Cal. Civ. Code § 1798.102). We have bundled support for these links into the NitroPay ad script.
 
-Include the following tag on your homepage and privacy policy and the link will be inserted **only if the user is a resident of California**. The link will inherit your stylesheets, and can be re-styled at your leisure to fit your website's look and feel.
+Include the following tag on your homepage and privacy policy and the link will be inserted **only if the user is a resident of California**.
 
 ```html
-<span class="nitropay-ccpa-link"></span>
+<span data-ccpa-link="1"></span>
 ```
 
 To test the CCPA links from other regions, you can append `?usp_debug=1` to your URL. E.g. `https://example.com/?usp_debug=1`.
@@ -26,6 +26,12 @@ To test the CCPA links from other regions, you can append `?usp_debug=1` to your
 ### 2. Update your privacy policy
 
 You are responsible for updating your own privacy policy to include all of the required CCPA disclosures. Your NitroPay representative can help you navigate the changes you'll have to make.
+
+### 3. Update your site config
+
+Access your [site list](https://panel.nitropay.com/sites) from the NitroPay panel and select the site you've made these changes to. When your CCPA links and privacy policy updates are live, check the applicable box and save your site configuration.
+
+If you have read and signed the **Limited Service Provider Agreement (LSPA)**, please check that box as well.
 
 ## Customization
 
