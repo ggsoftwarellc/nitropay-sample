@@ -1,7 +1,7 @@
 {
     "scripts": {
         "build": "./node_modules/.bin/gulp",
-        "start": "./node_modules/.bin/http-server --port 4209",
+        "start": "./node_modules/.bin/http-server ./dist --port 4209",
         "pub": "git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
     },
     "dependencies": {
@@ -9,6 +9,8 @@
         "gulp": "^4.0.2",
         "gulp-clean": "^0.4.0",
         "gulp-file-include": "^2.1.1",
+        "gulp-token-replace": "^1.1.5",
+        "gulp-watch": "^5.0.1",
         "http-server": "^0.12.1"
     }
 }

@@ -1,6 +1,7 @@
 const fileinclude = require('gulp-file-include');
 const gulp = require('gulp');
 const del = require('del');
+const replace = require('gulp-token-replace');
 
 const clean = () => {
     return del(['./dist/**']);
@@ -13,6 +14,13 @@ const html = () => {
             fileinclude({
                 prefix: '@@',
                 basepath: '@file'
+            })
+        )
+        .pipe(
+            replace({
+                global: {
+                    build: new Date().getTime()
+                }
             })
         )
         .pipe(gulp.dest('./dist'));
