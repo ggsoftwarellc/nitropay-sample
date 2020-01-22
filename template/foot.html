@@ -5,6 +5,33 @@
     </p>
 </footer>
 
-<script>
+<div class="adblocker-wrapper" id="blocker">
+    <div class="adblocker-inner">
+        <h3>Disable your ad-blocker on this site</h3>
+        <p>
+            You'll be unable to view or interact with any any of the samples while you're running an ad or script
+            blocking extension.
+        </p>
+        <p>
+            You can either whitelist this domain (recommended), or pause the adblocker for this session. Consult the
+            extension's documentation for more details. Refresh this page to try again.
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var testAd = document.createElement('div');
+    testAd.innerHTML = '&nbsp;';
+    testAd.className = 'adsbox';
+    document.body.appendChild(testAd);
+
+    setTimeout(function() {
+        if (testAd.offsetHeight === 0) {
+            document.getElementById('blocker').classList.add('active');
+        } else {
+            testAd.remove();
+        }
+    }, 50);
+
     hljs.initHighlightingOnLoad();
 </script>
