@@ -13,5 +13,10 @@
         "gulp-watch": "^5.0.1",
         "gulp-webserver": "^0.9.1",
         "http-server": "^0.12.1"
+    },
+    "devDependencies": {
+        "debug": "2.6.9",
+        "lodash.template": "4.5.0",
+        "open": "6.0.0"
     }
 }
