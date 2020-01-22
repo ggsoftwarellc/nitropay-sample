@@ -1,5 +1,6 @@
 {
     "scripts": {
+        "build": "./node_modules/.bin/gulp",
         "start": "./node_modules/.bin/http-server --port 4209",
         "subtree": "git subtree push --prefix dist origin gh-pages"
     },
