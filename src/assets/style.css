@@ -77,7 +77,10 @@ footer {
 
 .abstract.content.x2 {
     height: 500px;
-    background: #e2e2e2;
+}
+
+.abstract.content.x3 {
+    height: 750px;
 }
 
 .top-warning {
