@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NitroPay</title>
+        @@include('../template/head.html')
+    </head>
+    <body>
+        @@include('../template/nav.html')
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div id="placement-1"></div>
+
+                    <script type="text/javascript">
+                        window['nitroAds'].createAd('placement-1', {
+                            demo: true,
+                            refreshLimit: 10,
+                            refreshTime: 90,
+                            renderVisibleOnly: false,
+                            refreshVisibleOnly: true,
+                            sizes: [[728, 90]],
+                            report: {
+                                enabled: true,
+                                wording: 'Report Ad',
+                                position: 'bottom-right'
+                            }
+                        });
+                    </script>
+                </div>
+                <div class="col-sm">
+                    One of three columns
+                </div>
+                <div class="col-sm">
+                    One of three columns
+                </div>
+            </div>
+        </div>
+
+        @@include('../template/foot.html')
+    </body>
+</html>

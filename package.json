@@ -1,8 +1,13 @@
 {
     "scripts": {
-        "start": "./node_modules/.bin/http-server --port 4209"
+        "start": "./node_modules/.bin/http-server --port 4209",
+        "subtree": "git subtree push --prefix dist origin gh-pages"
     },
     "dependencies": {
+        "del": "^5.1.0",
+        "gulp": "^4.0.2",
+        "gulp-clean": "^0.4.0",
+        "gulp-file-include": "^2.1.1",
         "http-server": "^0.12.1"
     }
 }
