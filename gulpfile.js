@@ -6,7 +6,7 @@ const clean = () => {
     return del(['./dist/**']);
 };
 
-const include = () => {
+const html = () => {
     return gulp
         .src(['./src/**/*.html'])
         .pipe(
@@ -18,4 +18,8 @@ const include = () => {
         .pipe(gulp.dest('./dist'));
 };
 
-gulp.task('default', gulp.series(clean, include));
+const assets = () => {
+    return gulp.src(['./src/assets/**/*']).pipe(gulp.dest('./dist/assets'));
+};
+
+gulp.task('default', gulp.series(clean, html, assets));
