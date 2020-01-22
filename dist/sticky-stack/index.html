@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NitroPay - Sticky Stack Example</title>
+        <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="defaultLanguage" content="en" />
+<meta name="availableLanguages" content="en" />
+<link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16" />
+
+<base href="/" />
+
+<link
+    href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600|Roboto+Condensed:300,400,700,700i|Roboto:300,400,500,600"
+    rel="stylesheet"
+/>
+<link
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/default.min.css" />
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+
+<link href="/assets/bootstrap.min.css?1579695553719" rel="stylesheet" />
+<link href="/assets/style.css?1579695553719" rel="stylesheet" />
+
+<script type="text/javascript">
+    window['nitroAds'] = window['nitroAds'] || {
+        createAd: function() {
+            window.nitroAds.queue.push(['createAd', arguments]);
+        },
+        queue: []
+    };
+</script>
+<script async src="https://s.nitropay.com/ads-315.js"></script>
+
+
+        <style type="text/css">
+            .sidebar {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .sidebar > * {
+                flex: 0 0 auto;
+                margin-bottom: 25px;
+            }
+
+            .sidebar > *:last-child {
+                margin-bottom: 0;
+            }
+
+            .sidebar #sticky-stack {
+                flex: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="https://nitropay.com">
+            <img src="../assets/logo.png" height="30" class="d-inline-block align-top" alt="" />
+        </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <!--
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+            -->
+            <span class="navbar-text">
+                This is a demo site for ad placements
+            </span>
+        </div>
+    </nav>
+</div>
+
+
+        <div class="container top-warning visible-mobile">
+            <div class="alert alert-danger" role="alert">
+                This demo of the <strong>Sticky Stack</strong> is designed to be viewed on desktop. Please return to the
+                page on a screen with a higher display resolution.
+            </div>
+        </div>
+
+        <div class="container layout-blog block-mobile">
+            <div class="row">
+                <div class="col col-body">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Introducing the Sticky Stack</h1>
+                        <p class="lead">
+                            NitroPay's proprietary out-of-box format simplifies having highly viewable sticky ads that
+                            swap as the user scrolls down your page.
+                        </p>
+                        <hr class="my-4" />
+                        <p class="lead">
+                            <a
+                                class="btn btn-info"
+                                href="https://docs.nitropay.com/en/articles/3623661-sticky-stack-placement-format"
+                                role="button"
+                                >Read the Documentation</a
+                            >
+                            <a
+                                class="btn btn-light"
+                                href="https://github.com/ggsoftwarellc/nitropay-sample/blob/master/src/sticky-stack/index.html"
+                                target="_blank"
+                                role="button"
+                                ><i class="fa fa-github-alt" aria-hidden="true"></i> View on GitHub</a
+                            >
+                        </p>
+                    </div>
+
+                    <div class="setup">
+                        <h4>Step 1: Create a track for the unit</h4>
+                        <p>
+                            The pre-requisite to use the <strong>Sticky Stack</strong> format is a sidebar element at
+                            least 160-300px wide that fills 100% of the height you'd like the sticky ads to be bound
+                            inside.
+                        </p>
+
+                        <p>
+                            Take a look to the right and see our sample implementation that features a sidebar with 3
+                            elements.
+                        </p>
+
+                        <div class="row">
+                            <div class="col">
+                                <pre><code class="css">.layout-sample {
+    display: flex;
+    margin: 0 auto;
+    width: 900px;
+}
+
+.layout-left {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.layout-right {
+    flex: 0 0 300px;
+}
+
+#sticky-stack {
+    height: 100%;
+}</code></pre>
+                            </div>
+                            <div class="col">
+                                <pre><code class="html">&lt;div class=&quot;layout-sample&quot;&gt;
+    &lt;div class=&quot;layout-left&quot;&gt;
+        ...
+    &lt;/div&gt;
+    &lt;div class=&quot;layout-right&quot;&gt;
+        &lt;div id=&quot;sticky-stack&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                            </div>
+                        </div>
+
+                        <h4>Step 2: Create the ad unit</h4>
+                        <pre><code class="javascript">&lt;script type=&quot;text/javascript&quot;&gt;
+    window['nitroAds'].createAd('sticky-stack', {
+        format: 'sticky-stack',
+        stickyStackLimit: 15,
+        stickyStackSpace: 1.7,
+        sizes: [
+            [300, 600],
+            [300, 250],
+            [160, 600],
+        ],
+        report: {
+            enabled: true
+        },
+        mediaQuery: '(min-width: 992px)'
+    });
+&lt;/script&gt;</code></pre>
+                    </div>
+
+                    <div class="blog">
+    <div class="abstract header"><b style="width:38%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:42%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b style="width:45%"></b></div>
+    <div class="abstract paragraph">
+        <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:90%"></b>
+    </div>
+    <div class="abstract paragraph"><b></b><b></b><b style="width:78%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b style="width:87%"></b></div>
+    <div class="abstract footer"><b style="width:55%"></b></div>
+</div>
+ <div class="blog">
+    <div class="abstract header"><b style="width:38%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:42%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b style="width:45%"></b></div>
+    <div class="abstract paragraph">
+        <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:90%"></b>
+    </div>
+    <div class="abstract paragraph"><b></b><b></b><b style="width:78%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b style="width:87%"></b></div>
+    <div class="abstract footer"><b style="width:55%"></b></div>
+</div>
+
+                    <div class="blog">
+    <div class="abstract header"><b style="width:38%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:42%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b style="width:45%"></b></div>
+    <div class="abstract paragraph">
+        <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:90%"></b>
+    </div>
+    <div class="abstract paragraph"><b></b><b></b><b style="width:78%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b style="width:87%"></b></div>
+    <div class="abstract footer"><b style="width:55%"></b></div>
+</div>
+ <div class="blog">
+    <div class="abstract header"><b style="width:38%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:42%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b style="width:45%"></b></div>
+    <div class="abstract paragraph">
+        <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:90%"></b>
+    </div>
+    <div class="abstract paragraph"><b></b><b></b><b style="width:78%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b style="width:87%"></b></div>
+    <div class="abstract footer"><b style="width:55%"></b></div>
+</div>
+
+                    <div class="blog">
+    <div class="abstract header"><b style="width:38%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:42%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b style="width:45%"></b></div>
+    <div class="abstract paragraph">
+        <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:90%"></b>
+    </div>
+    <div class="abstract paragraph"><b></b><b></b><b style="width:78%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b style="width:87%"></b></div>
+    <div class="abstract footer"><b style="width:55%"></b></div>
+</div>
+ <div class="blog">
+    <div class="abstract header"><b style="width:38%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:42%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b style="width:45%"></b></div>
+    <div class="abstract paragraph">
+        <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:90%"></b>
+    </div>
+    <div class="abstract paragraph"><b></b><b></b><b style="width:78%"></b></div>
+    <div class="abstract paragraph"><b></b><b></b><b></b><b></b><b style="width:87%"></b></div>
+    <div class="abstract footer"><b style="width:55%"></b></div>
+</div>
+
+                </div>
+                <div class="col col-side">
+                    <div class="sidebar">
+                        <div class="abstract content"></div>
+                        <div id="sticky-stack"></div>
+                        <div class="abstract content x3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            window['nitroAds'].createAd('sticky-stack', {
+                demo: true,
+                format: 'sticky-stack',
+                stickyStackLimit: 15,
+                stickyStackSpace: 1.7,
+                sizes: [
+                    [300, 600],
+                    [300, 250]
+                ],
+                report: {
+                    enabled: true
+                },
+                mediaQuery: '(min-width: 992px)'
+            });
+        </script>
+
+        <footer class="footer">
+    <p>This is a demo site for ad placements.</p>
+    <p>
+        <a href="https://nitropay.com/">Back to NitroPay</a>
+    </p>
+</footer>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+    </body>
+</html>
