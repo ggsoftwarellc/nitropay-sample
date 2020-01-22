@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NitroPay - Article Example</title>
+        @@include('../template/head.html')
+
+        <style type="text/css">
+            .sample-article-auto {
+                margin-top: 20px;
+                margin-bottom: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        @@include('../template/nav.html')
+
+        <div class="container top-warning visible-mobile">
+            <div class="alert alert-danger" role="alert">
+                This demo of the <strong>Sticky Stack</strong> is designed to be viewed on desktop. Please return to the
+                page on a screen with a higher display resolution.
+            </div>
+        </div>
+
+        <div class="container layout-blog block-mobile">
+            <div class="row">
+                <div class="col col-body">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Article Ad Format</h1>
+                        <p class="lead">
+                            This proprietary NitroPay format embeds a dynamic number of well-spaced advertisements in
+                            long content pages.
+                        </p>
+                        <hr class="my-4" />
+                        <p class="lead">
+                            <a
+                                class="btn btn-light"
+                                href="https://github.com/ggsoftwarellc/nitropay-sample/blob/master/src/article/index.html"
+                                target="_blank"
+                                role="button"
+                                ><i class="fa fa-github-alt" aria-hidden="true"></i> View on GitHub</a
+                            >
+                        </p>
+                    </div>
+
+                    <div class="setup">
+                        <h4>How to implement the article ad format</h4>
+
+                        <p>
+                            Wrap your long content container with the id that you'll instantiate the article format on.
+                        </p>
+
+                        <div class="row">
+                            <div class="col">
+                                <pre><code class="css">&lt;script type="text/javascript"&gt;
+window['nitroAds'].createAd('sample-article', {
+    format: 'article',
+    pageInterval: 1,
+    refreshLimit: 10,
+    refreshTime: 90,
+    report: {
+        enabled: true,
+        wording: 'Report Ad',
+        position: 'bottom-right'
+    }
+});
+&lt;/script&gt;</code></pre>
+                            </div>
+                            <div class="col">
+                                <pre><code class="html">&lt;div id="sample-article"&gt;
+    &lt;p&gt; ... content here ... &lt;/p&gt;
+    &lt;p&gt; ... more content ... &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sample-article-top" class="sample-article-auto"></div>
+
+                    <div id="sample-article">
+                        @@include('../template/blog-article.html') @@include('../template/blog-article.html')
+                        @@include('../template/blog-article.html')
+                    </div>
+                </div>
+                <div class="col col-side">
+                    <div class="sidebar">
+                        <div class="abstract content"></div>
+                        <div id="sticky-stack"></div>
+                        <div class="abstract content x3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            window['nitroAds'].createAd('sample-article-top', {
+                format: 'display',
+                demo: true
+            });
+
+            window['nitroAds'].createAd('sample-article', {
+                format: 'article',
+                demo: true,
+                pageInterval: 1,
+                refreshLimit: 10,
+                refreshTime: 90,
+                report: {
+                    enabled: true,
+                    wording: 'Report Ad',
+                    position: 'bottom-right'
+                }
+            });
+        </script>
+
+        @@include('../template/foot.html')
+    </body>
+</html>

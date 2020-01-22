@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>NitroPay - Sticky Stack Example</title>
+        <title>NitroPay - Article Example</title>
         <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -53,23 +53,9 @@
 
 
         <style type="text/css">
-            .sidebar {
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-            }
-
-            .sidebar > * {
-                flex: 0 0 auto;
-                margin-bottom: 25px;
-            }
-
-            .sidebar > *:last-child {
-                margin-bottom: 0;
-            }
-
-            .sidebar #sticky-stack {
-                flex: 1;
+            .sample-article-auto {
+                margin-top: 20px;
+                margin-bottom: 50px;
             }
         </style>
     </head>
@@ -123,22 +109,16 @@
             <div class="row">
                 <div class="col col-body">
                     <div class="jumbotron">
-                        <h1 class="display-4">Sticky Stack Ad Format</h1>
+                        <h1 class="display-4">Article Ad Format</h1>
                         <p class="lead">
-                            NitroPay's proprietary out-of-box format simplifies having highly viewable sticky ads that
-                            swap as the user scrolls down your page.
+                            This proprietary NitroPay format embeds a dynamic number of well-spaced advertisements in
+                            long content pages.
                         </p>
                         <hr class="my-4" />
                         <p class="lead">
                             <a
-                                class="btn btn-info"
-                                href="https://docs.nitropay.com/en/articles/3623661-sticky-stack-placement-format"
-                                role="button"
-                                >Read the Documentation</a
-                            >
-                            <a
                                 class="btn btn-light"
-                                href="https://github.com/ggsoftwarellc/nitropay-sample/blob/master/src/sticky-stack/index.html"
+                                href="https://github.com/ggsoftwarellc/nitropay-sample/blob/master/src/article/index.html"
                                 target="_blank"
                                 role="button"
                                 ><i class="fa fa-github-alt" aria-hidden="true"></i> View on GitHub</a
@@ -147,72 +127,41 @@
                     </div>
 
                     <div class="setup">
-                        <h4>Step 1: Create a track for the unit</h4>
-                        <p>
-                            The pre-requisite to use the <strong>Sticky Stack</strong> format is a sidebar element at
-                            least 160-300px wide that fills 100% of the height you'd like the sticky ads to be bound
-                            inside.
-                        </p>
+                        <h4>How to implement the article ad format</h4>
 
                         <p>
-                            Take a look to the right and see our sample implementation that features a sidebar with 3
-                            elements.
+                            Wrap your long content container with the id that you'll instantiate the article format on.
                         </p>
 
                         <div class="row">
                             <div class="col">
-                                <pre><code class="css">.layout-sample {
-    display: flex;
-    margin: 0 auto;
-    width: 900px;
-}
-
-.layout-left {
-    flex: 1;
-    margin-right: 15px;
-}
-
-.layout-right {
-    flex: 0 0 300px;
-}
-
-#sticky-stack {
-    height: 100%;
-}</code></pre>
+                                <pre><code class="css">&lt;script type="text/javascript"&gt;
+window['nitroAds'].createAd('sample-article', {
+    format: 'article',
+    pageInterval: 1,
+    refreshLimit: 10,
+    refreshTime: 90,
+    report: {
+        enabled: true,
+        wording: 'Report Ad',
+        position: 'bottom-right'
+    }
+});
+&lt;/script&gt;</code></pre>
                             </div>
                             <div class="col">
-                                <pre><code class="html">&lt;div class=&quot;layout-sample&quot;&gt;
-    &lt;div class=&quot;layout-left&quot;&gt;
-        ...
-    &lt;/div&gt;
-    &lt;div class=&quot;layout-right&quot;&gt;
-        &lt;div id=&quot;sticky-stack&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+                                <pre><code class="html">&lt;div id="sample-article"&gt;
+    &lt;p&gt; ... content here ... &lt;/p&gt;
+    &lt;p&gt; ... more content ... &lt;/p&gt;
+&lt;/div&gt;</code></pre>
                             </div>
                         </div>
-
-                        <h4>Step 2: Create the ad unit</h4>
-                        <pre><code class="javascript">&lt;script type=&quot;text/javascript&quot;&gt;
-    window['nitroAds'].createAd('sticky-stack', {
-        format: 'sticky-stack',
-        stickyStackLimit: 15,
-        stickyStackSpace: 1.7,
-        sizes: [
-            [300, 600],
-            [300, 250],
-            [160, 600],
-        ],
-        report: {
-            enabled: true
-        },
-        mediaQuery: '(min-width: 992px)'
-    });
-&lt;/script&gt;</code></pre>
                     </div>
 
-                    <div class="blog">
+                    <div id="sample-article-top" class="sample-article-auto"></div>
+
+                    <div id="sample-article">
+                        <div class="blog">
     <div class="abstract header"><b style="width:38%"></b></div>
     <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></p>
     <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></p>
@@ -235,18 +184,7 @@
     <div class="abstract footer"><b style="width:55%"></b></div>
 </div>
 
-                    <div class="blog">
-    <div class="abstract header"><b style="width:38%"></b></div>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:42%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b style="width:45%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:90%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b style="width:78%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b style="width:87%"></b></p>
-    <div class="abstract footer"><b style="width:55%"></b></div>
-</div>
- <div class="blog">
+                        <div class="blog">
     <div class="abstract header"><b style="width:38%"></b></div>
     <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></p>
     <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></p>
@@ -258,29 +196,7 @@
     <div class="abstract footer"><b style="width:55%"></b></div>
 </div>
 
-                    <div class="blog">
-    <div class="abstract header"><b style="width:38%"></b></div>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:42%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b style="width:45%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:90%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b style="width:78%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b style="width:87%"></b></p>
-    <div class="abstract footer"><b style="width:55%"></b></div>
-</div>
- <div class="blog">
-    <div class="abstract header"><b style="width:38%"></b></div>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:42%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b style="width:45%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:90%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b style="width:78%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b style="width:87%"></b></p>
-    <div class="abstract footer"><b style="width:55%"></b></div>
-</div>
-
+                    </div>
                 </div>
                 <div class="col col-side">
                     <div class="sidebar">
@@ -293,19 +209,22 @@
         </div>
 
         <script type="text/javascript">
-            window['nitroAds'].createAd('sticky-stack', {
+            window['nitroAds'].createAd('sample-article-top', {
+                format: 'display',
+                demo: true
+            });
+
+            window['nitroAds'].createAd('sample-article', {
+                format: 'article',
                 demo: true,
-                format: 'sticky-stack',
-                stickyStackLimit: 15,
-                stickyStackSpace: 1.7,
-                sizes: [
-                    [300, 600],
-                    [300, 250]
-                ],
+                pageInterval: 1,
+                refreshLimit: 10,
+                refreshTime: 90,
                 report: {
-                    enabled: true
-                },
-                mediaQuery: '(min-width: 992px)'
+                    enabled: true,
+                    wording: 'Report Ad',
+                    position: 'bottom-right'
+                }
             });
         </script>
 
