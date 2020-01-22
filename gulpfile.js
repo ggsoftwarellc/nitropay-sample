@@ -22,4 +22,8 @@ const assets = () => {
     return gulp.src(['./src/assets/**/*']).pipe(gulp.dest('./dist/assets'));
 };
 
-gulp.task('default', gulp.series(clean, html, assets));
+const misc = () => {
+    return gulp.src(['./src/CNAME']).pipe(gulp.dest('./dist'));
+};
+
+gulp.task('default', gulp.series(clean, html, assets, misc));
