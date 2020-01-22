@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "start": "./node_modules/.bin/http-server --port 4209"
+    },
+    "dependencies": {
+        "http-server": "^0.12.1"
+    }
+}
