@@ -12,4 +12,4 @@ Go to
 
 # Publishing
 
-`yarn publish`
+`yarn pub`
