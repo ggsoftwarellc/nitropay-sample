@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>NitroPay</title>
+        <title>NitroPay - Sticky Stack Example</title>
         @@include('../template/head.html')
 
         <style type="text/css">
@@ -47,19 +47,85 @@
                         <hr class="my-4" />
                         <p class="lead">
                             <a
-                                class="btn btn-primary btn-lg"
+                                class="btn btn-info"
                                 href="https://docs.nitropay.com/en/articles/3623661-sticky-stack-placement-format"
                                 role="button"
                                 >Read the Documentation</a
                             >
                             <a
-                                class="btn btn-primary btn-lg"
+                                class="btn btn-light"
                                 href="https://github.com/ggsoftwarellc/nitropay-sample/blob/master/src/sticky-stack/index.html"
                                 target="_blank"
                                 role="button"
-                                >View on GitHub</a
+                                ><i class="fa fa-github-alt" aria-hidden="true"></i> View on GitHub</a
                             >
                         </p>
+                    </div>
+
+                    <div class="setup">
+                        <h4>Step 1: Create a track for the unit</h4>
+                        <p>
+                            The pre-requisite to use the <strong>Sticky Stack</strong> format is a sidebar element at
+                            least 160-300px wide that fills 100% of the height you'd like the sticky ads to be bound
+                            inside.
+                        </p>
+
+                        <p>
+                            Take a look to the right and see our sample implementation that features a sidebar with 3
+                            elements.
+                        </p>
+
+                        <div class="row">
+                            <div class="col">
+                                <pre><code class="css">.layout-sample {
+    display: flex;
+    margin: 0 auto;
+    width: 900px;
+}
+
+.layout-left {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.layout-right {
+    flex: 0 0 300px;
+}
+
+#sticky-stack {
+    height: 100%;
+}</code></pre>
+                            </div>
+                            <div class="col">
+                                <pre><code class="html">&lt;div class=&quot;layout-sample&quot;&gt;
+    &lt;div class=&quot;layout-left&quot;&gt;
+        ...
+    &lt;/div&gt;
+    &lt;div class=&quot;layout-right&quot;&gt;
+        &lt;div id=&quot;sticky-stack&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                            </div>
+                        </div>
+
+                        <h4>Step 2: Create the ad unit</h4>
+                        <pre><code class="javascript">&lt;script type=&quot;text/javascript&quot;&gt;
+    window['nitroAds'].createAd('sticky-stack', {
+        format: 'sticky-stack',
+        stickyStackLimit: 15,
+        stickyStackSpace: 1.7,
+        sizes: [
+            [300, 600],
+            [300, 250],
+            [160, 600],
+        ],
+        report: {
+            enabled: true
+        },
+        mediaQuery: '(min-width: 992px)'
+    });
+&lt;/script&gt;</code></pre>
                     </div>
 
                     @@include('../template/blog-article.html') @@include('../template/blog-article.html')
@@ -87,9 +153,7 @@
                     [300, 250]
                 ],
                 report: {
-                    enabled: true,
-                    wording: 'Report Ad',
-                    position: 'fixed-bottom-right'
+                    enabled: true
                 },
                 mediaQuery: '(min-width: 992px)'
             });

@@ -33,7 +33,7 @@ const assets = () => {
 };
 
 const misc = () => {
-    return gulp.src(['./src/CNAME']).pipe(gulp.dest('./dist'));
+    return gulp.src(['./src/CNAME', './src/favicon.ico']).pipe(gulp.dest('./dist'));
 };
 
 const serve = () => {
