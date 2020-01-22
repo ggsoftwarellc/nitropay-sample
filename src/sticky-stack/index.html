@@ -3,41 +3,82 @@
     <head>
         <title>NitroPay</title>
         @@include('../template/head.html')
+
+        <style type="text/css">
+            .sidebar {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .sidebar > * {
+                flex: 0 0 auto;
+                margin-bottom: 25px;
+            }
+
+            .sidebar > *:last-child {
+                margin-bottom: 0;
+            }
+
+            .sidebar #sticky-stack {
+                flex: 1;
+            }
+        </style>
     </head>
     <body>
         @@include('../template/nav.html')
 
-        <div class="container">
+        <div class="container layout-blog">
             <div class="row">
-                <div class="col-sm">
-                    <div id="placement-1"></div>
+                <div class="col col-body">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Introducing the Sticky Stack</h1>
+                        <p class="lead">
+                            NitroPay's proprietary out-of-box format simplifies having highly viewable sticky ads that
+                            swap as the user scrolls down your page.
+                        </p>
+                        <hr class="my-4" />
+                        <p class="lead">
+                            <a
+                                class="btn btn-primary btn-lg"
+                                href="https://docs.nitropay.com/en/articles/3623661-sticky-stack-placement-format"
+                                role="button"
+                                >View the Documentation</a
+                            >
+                        </p>
+                    </div>
 
-                    <script type="text/javascript">
-                        window['nitroAds'].createAd('placement-1', {
-                            demo: true,
-                            refreshLimit: 10,
-                            refreshTime: 90,
-                            renderVisibleOnly: false,
-                            refreshVisibleOnly: true,
-                            sizes: [[728, 90]],
-                            report: {
-                                enabled: true,
-                                wording: 'Report Ad',
-                                position: 'bottom-right'
-                            }
-                        });
-                    </script>
+                    @@include('../template/blog-article.html') @@include('../template/blog-article.html')
+                    @@include('../template/blog-article.html') @@include('../template/blog-article.html')
+                    @@include('../template/blog-article.html') @@include('../template/blog-article.html')
                 </div>
-                <div class="col-sm">
-                    One of three columns
-                </div>
-                <div class="col-sm">
-                    One of three columns
+                <div class="col col-side">
+                    <div class="sidebar">
+                        <div class="abstract content"></div>
+                        <div id="sticky-stack"></div>
+                        <div class="abstract content x2"></div>
+                    </div>
                 </div>
             </div>
-
-            Test 12345678
         </div>
+
+        <script type="text/javascript">
+            window['nitroAds'].createAd('sticky-stack', {
+                demo: true,
+                format: 'sticky-stack',
+                stickyStackLimit: 15,
+                stickyStackSpace: 1.7,
+                sizes: [
+                    [300, 600],
+                    [300, 250]
+                ],
+                report: {
+                    enabled: true,
+                    wording: 'Report Ad',
+                    position: 'fixed-bottom-right'
+                }
+            });
+        </script>
 
         @@include('../template/foot.html')
     </body>
