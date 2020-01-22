@@ -79,3 +79,23 @@ footer {
     height: 500px;
     background: #e2e2e2;
 }
+
+.top-warning {
+    margin-bottom: 30px;
+}
+
+.visible-mobile {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .visible-mobile {
+        display: block;
+    }
+
+    .block-mobile {
+        filter: blur(4px);
+        opacity: 0.6;
+        pointer-events: none;
+    }
+}

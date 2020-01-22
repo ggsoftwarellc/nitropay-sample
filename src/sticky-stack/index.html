@@ -28,7 +28,14 @@
     <body>
         @@include('../template/nav.html')
 
-        <div class="container layout-blog">
+        <div class="container top-warning visible-mobile">
+            <div class="alert alert-danger" role="alert">
+                This demo of the <strong>Sticky Stack</strong> is designed to be viewed on desktop. Please return to the
+                page on a screen with a higher display resolution.
+            </div>
+        </div>
+
+        <div class="container layout-blog block-mobile">
             <div class="row">
                 <div class="col col-body">
                     <div class="jumbotron">
@@ -76,7 +83,8 @@
                     enabled: true,
                     wording: 'Report Ad',
                     position: 'fixed-bottom-right'
-                }
+                },
+                mediaQuery: '(min-width: 992px)'
             });
         </script>
 
