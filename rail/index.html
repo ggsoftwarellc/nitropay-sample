@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>NitroPay - Sticky Stack Example</title>
+        <title>NitroPay - Sticky Side Rail Example</title>
         <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -68,7 +68,7 @@
                 margin-bottom: 0;
             }
 
-            .sidebar #sample-sticky-stack {
+            .sidebar #sticky-stack {
                 flex: 1;
             }
         </style>
@@ -114,8 +114,8 @@
 
         <div class="container top-warning visible-mobile">
             <div class="alert alert-danger" role="alert">
-                This demo of the <strong>Sticky Stack</strong> is designed to be viewed on desktop. Please return to the
-                page on a screen with a higher display resolution.
+                This demo of the <strong>Sticky Side Rail</strong> is designed to be viewed on desktop. Please return to
+                the page on a screen with a higher display resolution.
             </div>
         </div>
 
@@ -123,22 +123,16 @@
             <div class="row">
                 <div class="col col-body">
                     <div class="jumbotron">
-                        <h1 class="display-4">Sticky Stack Ad Format</h1>
+                        <h1 class="display-4">Sticky Side Rail Format</h1>
                         <p class="lead">
-                            NitroPay's proprietary out-of-box format simplifies having highly viewable sticky ads that
-                            swap as the user scrolls down your page.
+                            NitroPay's sticky side rail drops into layouts that have sufficient whitespace on the left
+                            or right of the screen.
                         </p>
                         <hr class="my-4" />
                         <p class="lead">
                             <a
-                                class="btn btn-info"
-                                href="https://docs.nitropay.com/en/articles/3623661-sticky-stack-placement-format"
-                                role="button"
-                                >Read the Documentation</a
-                            >
-                            <a
                                 class="btn btn-light"
-                                href="https://github.com/ggsoftwarellc/nitropay-sample/blob/gh-pages/sticky-stack/index.html"
+                                href="https://github.com/ggsoftwarellc/nitropay-sample/blob/gh-pages/rail/index.html"
                                 target="_blank"
                                 role="button"
                                 ><i class="fa fa-github-alt" aria-hidden="true"></i> View on GitHub</a
@@ -147,62 +141,24 @@
                     </div>
 
                     <div class="setup">
-                        <h4>Step 1: Create a track for the unit</h4>
+                        <h4>How to implement the sticky side rail format</h4>
                         <p>
-                            The pre-requisite to use the <strong>Sticky Stack</strong> format is a sidebar element at
-                            least 160-300px wide that fills 100% of the height you'd like the sticky ads to be bound
-                            inside.
-                        </p>
-
-                        <p>
-                            Take a look to the right and see our sample implementation that features a sidebar with 3
-                            elements.
+                            The following shows the current implementation on this demo page. The left ad scrolls the
+                            entire page with the user before stopping 200 pixels from the bottom of the page for the
+                            footer. The right ad scrolls until 2,500 pixels have been travelled before stopping.
                         </p>
 
                         <div class="row">
                             <div class="col">
-                                <pre><code class="css">.layout-sample {
-    display: flex;
-    margin: 0 auto;
-    width: 900px;
-}
-
-.layout-left {
-    flex: 1;
-    margin-right: 15px;
-}
-
-.layout-right {
-    flex: 0 0 300px;
-}
-
-#sample-sticky-stack {
-    height: 100%;
-}</code></pre>
-                            </div>
-                            <div class="col">
-                                <pre><code class="html">&lt;div class=&quot;layout-sample&quot;&gt;
-    &lt;div class=&quot;layout-left&quot;&gt;
-        ...
-    &lt;/div&gt;
-    &lt;div class=&quot;layout-right&quot;&gt;
-        &lt;div id=&quot;sample-sticky-stack&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-                            </div>
-                        </div>
-
-                        <h4>Step 2: Create the ad unit</h4>
-                        <pre><code class="javascript">&lt;script type=&quot;text/javascript&quot;&gt;
-    window['nitroAds'].createAd('sample-sticky-stack', {
-        format: 'sticky-stack',
-        stickyStackLimit: 15,
-        stickyStackSpace: 1.7,
+                                <pre><code class="javascript">&lt;script type=&quot;text/javascript&quot;&gt;
+    window['nitroAds'].createAd('sample-rail-1', {
+        format: 'rail',
+        rail: 'left',
+        railOffsetBottom: 200,
         sizes: [
-            [300, 600],
-            [300, 250],
             [160, 600],
+            [300, 600],
+            [300, 250]
         ],
         report: {
             enabled: true
@@ -210,6 +166,26 @@
         mediaQuery: '(min-width: 992px)'
     });
 &lt;/script&gt;</code></pre>
+                            </div>
+                            <div class="col">
+                                <pre><code class="javascript">&lt;script type=&quot;text/javascript&quot;&gt;
+    window['nitroAds'].createAd('sample-rail-2', {
+        format: 'rail',
+        rail: 'right',
+        railDistance: 2500,
+        sizes: [
+            [160, 600],
+            [300, 600],
+            [300, 250]
+        ],
+        report: {
+            enabled: true
+        },
+        mediaQuery: '(min-width: 992px)'
+    });
+&lt;/script&gt;</code></pre>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="blog">
@@ -282,23 +258,45 @@
 </div>
 
                 </div>
+
                 <div class="col col-side">
                     <div class="sidebar">
                         <div class="abstract content"></div>
-                        <div id="sample-sticky-stack"></div>
                         <div class="abstract content x3"></div>
+                        <div class="abstract content x3"></div>
+                        <div class="abstract content"></div>
+                        <div class="abstract content x3"></div>
+                        <div class="abstract content x3"></div>
+                        <div class="abstract content"></div>
                     </div>
                 </div>
             </div>
         </div>
 
         <script type="text/javascript">
-            window['nitroAds'].createAd('sample-sticky-stack', {
+            window['nitroAds'].createAd('sample-rail-left', {
                 demo: true,
-                format: 'sticky-stack',
-                stickyStackLimit: 15,
-                stickyStackSpace: 1.7,
+                format: 'rail',
+                rail: 'left',
+                railOffsetBottom: 200,
                 sizes: [
+                    [160, 600],
+                    [300, 600],
+                    [300, 250]
+                ],
+                report: {
+                    enabled: true
+                },
+                mediaQuery: '(min-width: 992px)'
+            });
+
+            window['nitroAds'].createAd('sample-rail-right', {
+                demo: true,
+                format: 'rail',
+                rail: 'right',
+                railDistance: 2500,
+                sizes: [
+                    [160, 600],
                     [300, 600],
                     [300, 250]
                 ],
