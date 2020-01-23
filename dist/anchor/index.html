@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>NitroPay - Article Example</title>
+        <title>NitroPay - Anchor Example</title>
         <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,12 +52,7 @@
 </script>
 
 
-        <style type="text/css">
-            .sample-article-auto {
-                margin-top: 20px;
-                margin-bottom: 50px;
-            }
-        </style>
+        <style type="text/css"></style>
     </head>
     <body>
         <div class="container">
@@ -98,20 +93,20 @@
 </div>
 
 
-        <div class="container layout-blog">
+        <div class="container layout-emulator">
             <div class="row">
                 <div class="col col-body">
                     <div class="jumbotron">
-                        <h1 class="display-4">Article Ad Format</h1>
+                        <h1 class="display-4">Anchor Ad Format</h1>
                         <p class="lead">
-                            This NitroPay format embeds a dynamic number of well-spaced advertisements in long content
-                            pages. Ads are lazy-loaded as the user scrolls for higher viewability.
+                            Our anchor attaches to the bottom or top of the screen and scrolls with the user for ads
+                            with maximum viewability.
                         </p>
                         <hr class="my-4" />
                         <p class="lead">
                             <a
                                 class="btn btn-light"
-                                href="https://github.com/ggsoftwarellc/nitropay-sample/blob/gh-pages/article/index.html"
+                                href="https://github.com/ggsoftwarellc/nitropay-sample/blob/gh-pages/anchor/embed.html"
                                 target="_blank"
                                 role="button"
                                 ><i class="fa fa-github-alt" aria-hidden="true"></i> View on GitHub</a
@@ -119,103 +114,52 @@
                         </p>
                     </div>
 
-                    <div class="setup">
-                        <h4>How to implement the article ad format</h4>
+                    <h4>How to implement the anchor ad format</h4>
 
-                        <p>
-                            Wrap your long content container with the id that you'll instantiate the article format on.
-                        </p>
+                    <p>
+                        See the following snippets for example implementations of the anchor. The emulator to the right
+                        shows the typical implementation on a phone.
+                    </p>
 
-                        <div class="row">
-                            <div class="col">
-                                <pre><code class="css">&lt;script type="text/javascript"&gt;
-    window['nitroAds'].createAd('sample-article', {
-        format: 'article',
-        pageInterval: 1,
+                    <h5>Mobile Bottom Anchor</h5>
+                    <pre><code class="javascript">&lt;script type="text/javascript"&gt;
+    window['nitroAds'].createAd('sample-anchor-1', {
+        format: 'anchor',
+        refreshLimit: 10,
+        refreshTime: 90,
+        sizes: [[320, 50]],
         report: {
             enabled: true
-        }
+        },
+        mediaQuery: '(max-width: 767px)'
     });
 &lt;/script&gt;</code></pre>
-                            </div>
-                            <div class="col">
-                                <pre><code class="html">&lt;div id="sample-article"&gt;
-    &lt;p&gt; ... content here ... &lt;/p&gt;
-    &lt;p&gt; ... more content ... &lt;/p&gt;
-&lt;/div&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div id="sample-article-top" class="sample-article-auto"></div>
-
-                    <div id="sample-article">
-                        <div class="blog">
-    <div class="abstract header"><b style="width:38%"></b></div>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:42%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b style="width:45%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:90%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b style="width:78%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b style="width:87%"></b></p>
-    <div class="abstract footer"><b style="width:55%"></b></div>
-</div>
- <div class="blog">
-    <div class="abstract header"><b style="width:38%"></b></div>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:42%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b style="width:45%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:90%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b style="width:78%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b style="width:87%"></b></p>
-    <div class="abstract footer"><b style="width:55%"></b></div>
-</div>
-
-                        <div class="blog">
-    <div class="abstract header"><b style="width:38%"></b></div>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:22%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:55%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b style="width:42%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b style="width:45%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b style="width:90%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b style="width:78%"></b></p>
-    <p class="abstract paragraph"><b></b><b></b><b></b><b></b><b style="width:87%"></b></p>
-    <div class="abstract footer"><b style="width:55%"></b></div>
-</div>
-
-                    </div>
+                    <h5>Desktop Bottom Leaderboard</h5>
+                    <pre><code class="javascript">&lt;script type="text/javascript"&gt;
+    window['nitroAds'].createAd('sample-anchor-2', {
+        format: 'anchor',
+        refreshLimit: 10,
+        refreshTime: 90,
+        sizes: [[728, 90]],
+        report: {
+            enabled: true
+        },
+        mediaQuery: '(min-width: 768px)'
+    });
+&lt;/script&gt;</code></pre>
                 </div>
-                <div class="col col-side">
-                    <div class="sidebar">
-                        <div class="abstract content"></div>
-                        <div id="sticky-stack"></div>
-                        <div class="abstract content x3"></div>
+
+                <div class="col col-phone">
+                    <div class="phone-emulator">
+                        <div class="overlay"></div>
+                        <div class="screen">
+                            <iframe class="emulator" src="/anchor/embed.html"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <script type="text/javascript">
-            window['nitroAds'].createAd('sample-article-top', {
-                format: 'display',
-                demo: true
-            });
-
-            window['nitroAds'].createAd('sample-article', {
-                format: 'article',
-                demo: true,
-                pageInterval: 1,
-                refreshLimit: 10,
-                refreshTime: 90,
-                report: {
-                    enabled: true,
-                    wording: 'Report Ad',
-                    position: 'bottom-right'
-                }
-            });
-        </script>
 
         <footer class="footer">
     <p>This is a demo site for ad placements.</p>

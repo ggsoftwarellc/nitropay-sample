@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NitroPay - Anchor Example</title>
+        @@include('../template/head.html')
+
+        <style type="text/css"></style>
+    </head>
+    <body>
+        @@include('../template/nav.html')
+
+        <div class="container layout-emulator">
+            <div class="row">
+                <div class="col col-body">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Anchor Ad Format</h1>
+                        <p class="lead">
+                            Our anchor attaches to the bottom or top of the screen and scrolls with the user for ads
+                            with maximum viewability.
+                        </p>
+                        <hr class="my-4" />
+                        <p class="lead">
+                            <a
+                                class="btn btn-light"
+                                href="https://github.com/ggsoftwarellc/nitropay-sample/blob/gh-pages/anchor/embed.html"
+                                target="_blank"
+                                role="button"
+                                ><i class="fa fa-github-alt" aria-hidden="true"></i> View on GitHub</a
+                            >
+                        </p>
+                    </div>
+
+                    <h4>How to implement the anchor ad format</h4>
+
+                    <p>
+                        See the following snippets for example implementations of the anchor. The emulator to the right
+                        shows the typical implementation on a phone.
+                    </p>
+
+                    <h5>Mobile Bottom Anchor</h5>
+                    <pre><code class="javascript">&lt;script type="text/javascript"&gt;
+    window['nitroAds'].createAd('sample-anchor-1', {
+        format: 'anchor',
+        refreshLimit: 10,
+        refreshTime: 90,
+        sizes: [[320, 50]],
+        report: {
+            enabled: true
+        },
+        mediaQuery: '(max-width: 767px)'
+    });
+&lt;/script&gt;</code></pre>
+
+                    <h5>Desktop Bottom Leaderboard</h5>
+                    <pre><code class="javascript">&lt;script type="text/javascript"&gt;
+    window['nitroAds'].createAd('sample-anchor-2', {
+        format: 'anchor',
+        refreshLimit: 10,
+        refreshTime: 90,
+        sizes: [[728, 90]],
+        report: {
+            enabled: true
+        },
+        mediaQuery: '(min-width: 768px)'
+    });
+&lt;/script&gt;</code></pre>
+                </div>
+
+                <div class="col col-phone">
+                    <div class="phone-emulator">
+                        <div class="overlay"></div>
+                        <div class="screen">
+                            <iframe class="emulator" src="/anchor/embed.html"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('../template/foot.html')
+    </body>
+</html>

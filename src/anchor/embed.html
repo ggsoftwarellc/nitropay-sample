@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NitroPay - Anchor Embed</title>
+        @@include('../template/head.html')
+
+        <style type="text/css">
+            body::-webkit-scrollbar {
+                display: none;
+            }
+
+            body {
+                -ms-overflow-style: none;
+            }
+
+            .layout-embed {
+                padding-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container layout-embed">
+            <div class="row">
+                <div class="col col-body">
+                    <div id="sample-article">
+                        @@include('../template/blog-article.html') @@include('../template/blog-article.html')
+                        @@include('../template/blog-article.html')
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            window['nitroAds'].createAd('sample-anchor', {
+                format: 'anchor',
+                demo: true,
+                refreshLimit: 10,
+                refreshTime: 90,
+                sizes: [[320, 50]],
+                report: {
+                    enabled: true,
+                    wording: 'Report Ad',
+                    position: 'bottom-right'
+                },
+                mediaQuery: '(max-width: 767px)'
+            });
+        </script>
+
+        @@include('../template/foot.html')
+    </body>
+</html>

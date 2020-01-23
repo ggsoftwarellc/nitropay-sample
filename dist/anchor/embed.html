@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>NitroPay - Article Example</title>
+        <title>NitroPay - Anchor Embed</title>
         <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -53,102 +53,23 @@
 
 
         <style type="text/css">
-            .sample-article-auto {
-                margin-top: 20px;
-                margin-bottom: 50px;
+            body::-webkit-scrollbar {
+                display: none;
+            }
+
+            body {
+                -ms-overflow-style: none;
+            }
+
+            .layout-embed {
+                padding-top: 50px;
             }
         </style>
     </head>
     <body>
-        <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="https://nitropay.com">
-            <img src="../assets/logo.png" height="30" class="d-inline-block align-top" alt="" />
-        </a>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <!--
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-            </ul>
-            -->
-            <span class="navbar-text">
-                This is a demo site for ad placements
-            </span>
-        </div>
-    </nav>
-</div>
-
-
-        <div class="container layout-blog">
+        <div class="container layout-embed">
             <div class="row">
                 <div class="col col-body">
-                    <div class="jumbotron">
-                        <h1 class="display-4">Article Ad Format</h1>
-                        <p class="lead">
-                            This NitroPay format embeds a dynamic number of well-spaced advertisements in long content
-                            pages. Ads are lazy-loaded as the user scrolls for higher viewability.
-                        </p>
-                        <hr class="my-4" />
-                        <p class="lead">
-                            <a
-                                class="btn btn-light"
-                                href="https://github.com/ggsoftwarellc/nitropay-sample/blob/gh-pages/article/index.html"
-                                target="_blank"
-                                role="button"
-                                ><i class="fa fa-github-alt" aria-hidden="true"></i> View on GitHub</a
-                            >
-                        </p>
-                    </div>
-
-                    <div class="setup">
-                        <h4>How to implement the article ad format</h4>
-
-                        <p>
-                            Wrap your long content container with the id that you'll instantiate the article format on.
-                        </p>
-
-                        <div class="row">
-                            <div class="col">
-                                <pre><code class="css">&lt;script type="text/javascript"&gt;
-    window['nitroAds'].createAd('sample-article', {
-        format: 'article',
-        pageInterval: 1,
-        report: {
-            enabled: true
-        }
-    });
-&lt;/script&gt;</code></pre>
-                            </div>
-                            <div class="col">
-                                <pre><code class="html">&lt;div id="sample-article"&gt;
-    &lt;p&gt; ... content here ... &lt;/p&gt;
-    &lt;p&gt; ... more content ... &lt;/p&gt;
-&lt;/div&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="sample-article-top" class="sample-article-auto"></div>
-
                     <div id="sample-article">
                         <div class="blog">
     <div class="abstract header"><b style="width:38%"></b></div>
@@ -187,33 +108,22 @@
 
                     </div>
                 </div>
-                <div class="col col-side">
-                    <div class="sidebar">
-                        <div class="abstract content"></div>
-                        <div id="sticky-stack"></div>
-                        <div class="abstract content x3"></div>
-                    </div>
-                </div>
             </div>
         </div>
 
         <script type="text/javascript">
-            window['nitroAds'].createAd('sample-article-top', {
-                format: 'display',
-                demo: true
-            });
-
-            window['nitroAds'].createAd('sample-article', {
-                format: 'article',
+            window['nitroAds'].createAd('sample-anchor', {
+                format: 'anchor',
                 demo: true,
-                pageInterval: 1,
                 refreshLimit: 10,
                 refreshTime: 90,
+                sizes: [[320, 50]],
                 report: {
                     enabled: true,
                     wording: 'Report Ad',
                     position: 'bottom-right'
-                }
+                },
+                mediaQuery: '(max-width: 767px)'
             });
         </script>
 
