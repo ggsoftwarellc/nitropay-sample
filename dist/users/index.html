@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NitroPay - Sticky Stack Example</title>
+        <script src="https://s.nitropay.com/nitropay.js" async defer></script>
+        <script type="text/javascript">
+            document.addEventListener('nitropay.ready', () => {
+                const status = document.getElementById('status');
+                status.innerHTML = 'Authorizing with login server...';
+
+                const npay = window['nitropay'];
+                const auth = new npay.Auth({ clientId: 'nitropay' });
+                auth.authorize().then(() => {
+                    status.innerHTML = 'Authorized!';
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="status"></div>
+    </body>
+</html>

@@ -1,10 +1,8 @@
 # Dev
 
-`yarn start`
-
-Go to
-
-`localhost:4209`
+ * `yarn install`
+ * `yarn start`
+ * `http://localhost:4209`
 
 # Building
 
